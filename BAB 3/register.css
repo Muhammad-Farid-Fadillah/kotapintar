@@ -1,0 +1,106 @@
+/* Mengatur gaya untuk container login */
+body {
+    margin: 0; /* Menghilangkan margin default */
+}
+
+#login {
+    display: flex;
+    flex-direction: column; /* Mengatur layout secara vertikal */
+    justify-content: center; /* Memusatkan form */
+    align-items: center; /* Memusatkan vertikal */
+    height: 100vh; /* Mengisi tinggi layar */
+    background-color: #146492; /* Latar belakang halaman login */
+}
+
+#login form {
+    background-color: #ffffff; /* Warna latar belakang form */
+    padding: 30px; /* Padding di dalam form */
+    border-radius: 10px; /* Sudut melengkung */
+    max-width: 400px; /* Lebar maksimum form */
+    width: 100%; /* Lebar penuh */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan yang halus */
+}
+.login-image {
+    width: 200px; /* Ukuran gambar */
+    margin-bottom: 1px; /* Jarak bawah untuk gambar */
+}
+
+#login h2 {
+    text-align: center; /* Memusatkan judul */
+    color: #007BFF; /* Warna judul */
+    margin-bottom: 20px; /* Jarak bawah untuk judul */
+    font-size: 24px; /* Ukuran font judul */
+}
+
+#login label {
+    display: block; /* Menampilkan label sebagai block */
+    margin-bottom: 8px; /* Jarak bawah label */
+    font-weight: bold; /* Mencetak label */
+    color: #333; /* Warna teks label */
+}
+
+#login input[type="email"],
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%; /* Lebar penuh */
+    padding: 12px; /* Padding untuk input */
+    margin-bottom: 15px; /* Jarak bawah input */
+    border: 1px solid #ccc; /* Warna border input */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi saat fokus */
+}
+
+#login input[type="email"]:focus,
+#login input[type="text"]:focus,
+#login input[type="password"]:focus {
+    border-color: #007BFF; /* Border warna saat fokus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Bayangan saat fokus */
+}
+
+#login button {
+    width: 100%; /* Lebar penuh */
+    padding: 12px; /* Padding tombol */
+    background-color: #007BFF; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor pointer saat hover */
+    font-size: 16px; /* Ukuran font tombol */
+    transition: background-color 0.3s, transform 0.2s; /* Transisi saat hover */
+}
+
+#login button:hover {
+    background-color: #0056b3; /* Warna saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+#login p {
+    text-align: center; /* Memusatkan teks */
+    margin-top: 15px; /* Jarak atas untuk paragraf */
+    color: #666; /* Warna teks paragraf */
+    font-size: 14px; /* Ukuran font paragraf */
+}
+/* Styling untuk Snackbar */
+#snackbar {
+    visibility: hidden; /* Snackbar akan tidak terlihat pada awalnya */
+    min-width: 250px; /* Lebar minimal Snackbar */
+    background-color: #333; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    text-align: center; /* Rata tengah */
+    border-radius: 4px; /* Membuat sudut membulat */
+    padding: 16px; /* Padding */
+    position: fixed; /* Posisi tetap */
+    z-index: 1; /* Prioritas di atas elemen lain */
+    left: 50%; /* Menempatkan di tengah secara horizontal */
+    bottom: 30px; /* Jarak dari bawah halaman */
+    font-size: 17px; /* Ukuran font */
+    opacity: 0; /* Opasitas awal */
+    transition: opacity 0.5s, bottom 0.5s; /* Transisi untuk animasi */
+}
+
+/* Snackbar ketika aktif */
+#snackbar.show {
+    visibility: visible; /* Snackbar akan terlihat */
+    opacity: 1; /* Opasitas penuh */
+    bottom: 50px; /* Jarak dari bawah saat muncul */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main>
+        <section id="login" class="section">
+            <!-- Menambahkan gambar di atas input username -->
+            <img src="newlogo.png" alt="Login Image" class="login-image">
+            <form action="dashboard.html" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan Password" required>
+    
+                <button type="submit">Log In</button>
+            </form>
+            <p>Belum punya akun? <a href="register.html">Daftar di sini</a>.</p>
+        </section>
+    </main>
+    <div id="snackbar"></div>
+    <script>
+        // Fungsi untuk menampilkan Snackbar
+        function showSnackbar(message) {
+            var snackbar = document.getElementById("snackbar");
+            snackbar.textContent = message;
+            snackbar.className = "show";
+            setTimeout(function() {
+                snackbar.className = snackbar.className.replace("show", "");
+            }, 3000); // Snackbar akan hilang setelah 3 detik
+        }
+    
+        // Contoh penggunaan: memanggil fungsi ketika form login di-submit
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Menghindari reload halaman
+            showSnackbar("Login berhasil!");
+            setTimeout(() => {
+                window.location.href = "dashboard.html"; // Redirect setelah 3 detik
+            }, 3000);
+        });
+    </script>    
+</body>
+</html>
