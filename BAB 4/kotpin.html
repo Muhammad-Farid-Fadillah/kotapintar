@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kota Pintar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="newlogo.png" alt="Logo Kota Pintar">
+            <h1>KOTA <br><span>PINTAR</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="login.html">Admin</a></li>
+                <!-- <li><a href="register.html">Register</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Selamat Datang di Smart City</h2>
+        <p>Kota Pintar menghadirkan inovasi teknologi untuk kenyamanan warga. Mari bergabung untuk membangun masa depan yang lebih cerah.</p>
+        
+        <!-- Tombol untuk membuka pop-up -->
+        <button id="openPopup" class="popup-button">Info Layanan</button>
+    </main>
+
+    <!-- Pop-up Box -->
+    <div id="popupBox" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h3>Layanan Kota Pintar</h3>
+            <p>Kami menawarkan berbagai layanan cerdas, termasuk pemantauan lalu lintas, keamanan lingkungan, dan informasi publik yang terkini. 
+               Semua layanan ini dirancang untuk memudahkan kehidupan warga dan meningkatkan efisiensi kota.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kota Pintar. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript untuk Pop-up -->
+    <script>
+        // Mengambil elemen pop-up
+        const popupBox = document.getElementById('popupBox');
+        const openPopup = document.getElementById('openPopup');
+        const closePopup = document.getElementById('closePopup');
+
+        // Fungsi untuk menampilkan pop-up
+        openPopup.addEventListener('click', function() {
+            popupBox.style.display = 'flex';
+        });
+
+        // Fungsi untuk menutup pop-up
+        closePopup.addEventListener('click', function() {
+            popupBox.style.display = 'none';
+        });
+
+        // Menutup pop-up jika area luar konten diklik
+        window.addEventListener('click', function(event) {
+            if (event.target === popupBox) {
+                popupBox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* Mengatur gaya dasar untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #146492;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Mengatur gaya untuk header */
+header {
+    background-color: #13567c; /* Warna biru untuk header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gaya untuk logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px; /* Ukuran logo */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: rgb(32, 29, 29);
+    font-size: 28px;
+    margin: 0;
+}
+
+.logo span {
+    color: #ffffff; /* Warna emas untuk kata 'PINTAR' */
+}
+
+/* Mengatur gaya untuk navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    border: 10px solid #007BFF; /* Warna border yang lebih tipis */
+    border-radius: 20px; /* Mengatur sudut kotak agar melengkung */
+    background-color: #007BFF; /* Warna latar belakang */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+    padding: 5px 10px; /* Jarak di dalam item navigasi */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* Mengubah warna teks menjadi putih agar kontras */
+    padding: 10px 15px;
+    border-radius: 20px; /* Sesuaikan sudut dengan border */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* nav ul li a:hover {
+    background-color: #1499e6; /* Warna saat hover 
+    transform: scale(1.05); /* Efek zoom yang lebih halus saat hover 
+} */
+
+/* Mengatur gaya untuk main content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Tengah secara vertikal */
+    text-align: center; /* Rata tengah */
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 36px;
+    color: #ffffff; /* Warna teks utama */
+    margin-top: 20px;
+}
+
+/* Mengatur gaya untuk footer (jika diperlukan) */
+footer {
+    background-color: #007BFF;
+    color: rgb(255, 255, 255); /* Mengubah warna teks footer menjadi putih */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query untuk responsivitas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Mengubah arah navigasi menjadi kolom pada perangkat kecil */
+        align-items: center; /* Rata tengah */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Jarak vertikal antar item navigasi */
+    }
+
+    main h2 {
+        font-size: 28px; /* Mengurangi ukuran font pada perangkat kecil */
+    }
+}
+/* Gaya untuk tombol pop-up */
+.popup-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk pop-up box */
+.popup {
+    display: none; /* Disembunyikan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background transparan hitam */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+    color: #146492;
+    margin-top: 0;
+}
+
+.popup-content p {
+    color: #333333;
+    font-size: 16px;
+}
+
+/* Tombol close di pop-up */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333;
+}
